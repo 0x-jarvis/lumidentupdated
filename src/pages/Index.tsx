@@ -309,14 +309,12 @@ const Index = () => {
             title="Meet the clinical leads behind each department"
             subtitle="Three specialist departments, each guided by a clinician whose academic background and day-to-day practice shape the standard of care."
           />
-          <div className="mx-auto grid max-w-7xl gap-6 md:grid-cols-2 xl:gap-8 2xl:grid-cols-3">
+          <div className="mx-auto grid max-w-7xl grid-cols-1 gap-6 md:grid-cols-3 md:gap-6 xl:gap-8">
             {departmentHighlights.map((department, i) => (
-              <AnimatedSection key={department.key} delay={i * 0.1}>
-                <Card
-                  className={`h-full overflow-hidden border-border/40 bg-card/95 shadow-[0_18px_55px_rgba(15,23,42,0.07)] transition-all duration-300 hover:-translate-y-1 hover:shadow-[0_24px_70px_rgba(15,23,42,0.1)] ${i === 2 ? "md:col-span-2 2xl:col-span-1" : ""}`}
-                >
-                  <CardContent className="flex h-full flex-col p-5 sm:p-6 md:p-7 xl:p-8">
-                    <div className={`relative overflow-hidden rounded-[2rem] border border-border/30 bg-gradient-to-br ${department.color} p-6 sm:p-7`}>
+              <AnimatedSection key={department.key} delay={i * 0.1} className="h-full">
+                <Card className="flex h-full flex-col overflow-hidden border-border/40 bg-card/95 shadow-[0_18px_55px_rgba(15,23,42,0.07)] transition-all duration-300 hover:-translate-y-1 hover:shadow-[0_24px_70px_rgba(15,23,42,0.1)]">
+                  <CardContent className="flex h-full min-h-0 flex-col p-5 sm:p-6 md:p-7 xl:p-8">
+                    <div className={`relative shrink-0 overflow-hidden rounded-[2rem] border border-border/30 bg-gradient-to-br ${department.color} p-6 sm:p-7`}>
                       <div className="absolute inset-0 bg-[radial-gradient(circle_at_top,rgba(255,255,255,0.45),transparent_55%)]" />
                       <div className="relative flex aspect-[4/4.8] items-center justify-center overflow-hidden rounded-[1.6rem] border border-white/35 bg-background/80 px-6 py-5 shadow-[inset_0_1px_0_rgba(255,255,255,0.6)] sm:px-7">
                         <div className="absolute inset-x-6 top-6 h-px bg-gradient-to-r from-transparent via-white/60 to-transparent sm:inset-x-7" />
@@ -333,55 +331,54 @@ const Index = () => {
                       <span className="sr-only">{department.portraitAlt}</span>
                     </div>
 
-                    <div className="mt-5 min-h-[3.5rem]">
+                    <div className="mt-5 min-h-[3.5rem] shrink-0">
                       <p className="text-sm leading-relaxed text-muted-foreground">{department.academicLine}</p>
                     </div>
 
-                    <div className="mt-4 space-y-3.5">
-                      <p className="min-h-[8rem] text-sm leading-relaxed text-muted-foreground sm:min-h-[8.5rem] xl:min-h-[9rem]">
-                        {department.bio}
-                      </p>
+                    <p className="mt-4 shrink-0 text-sm leading-relaxed text-muted-foreground">{department.bio}</p>
 
-                      <div className="space-y-3.5">
-                        <div className="rounded-[1.4rem] border border-border/35 bg-muted/40 p-3.5 xl:p-4">
-                          <p className="text-[11px] font-semibold uppercase tracking-[0.22em] text-muted-foreground">
-                            Credentials
-                          </p>
-                          <div className="mt-2.5 space-y-1.5">
-                            {department.credentials.map((item) => (
-                              <p key={item} className="text-sm leading-[1.55] text-foreground/90">
-                                {item}
-                              </p>
-                            ))}
-                          </div>
+                    {/* Fills remaining card height so Credentials / Recognition / Clinical focus start on the same row across columns */}
+                    <div className="min-h-4 flex-1" aria-hidden="true" />
+
+                    <div className="mt-4 grid shrink-0 grid-cols-1 gap-3.5">
+                      <div className="flex min-h-[13.5rem] flex-col rounded-[1.4rem] border border-border/35 bg-muted/40 p-3.5 xl:p-4">
+                        <p className="shrink-0 text-[11px] font-semibold uppercase tracking-[0.22em] text-muted-foreground">
+                          Credentials
+                        </p>
+                        <div className="mt-2.5 flex min-h-0 flex-1 flex-col justify-start space-y-1.5">
+                          {department.credentials.map((item) => (
+                            <p key={item} className="text-sm leading-[1.55] text-foreground/90">
+                              {item}
+                            </p>
+                          ))}
                         </div>
+                      </div>
 
-                        <div className="rounded-[1.4rem] border border-border/35 bg-muted/40 p-3.5 xl:p-4">
-                          <p className="text-[11px] font-semibold uppercase tracking-[0.22em] text-muted-foreground">
-                            Recognition
-                          </p>
-                          <p className="mt-2.5 text-sm leading-relaxed text-foreground/90">
-                            {department.memberships.join(" · ")}
-                          </p>
-                        </div>
+                      <div className="flex min-h-[6.25rem] flex-col rounded-[1.4rem] border border-border/35 bg-muted/40 p-3.5 xl:p-4">
+                        <p className="shrink-0 text-[11px] font-semibold uppercase tracking-[0.22em] text-muted-foreground">
+                          Recognition
+                        </p>
+                        <p className="mt-2.5 flex-1 text-sm leading-relaxed text-foreground/90">
+                          {department.memberships.join(" · ")}
+                        </p>
+                      </div>
 
-                        <div className="rounded-[1.4rem] border border-border/35 bg-muted/40 p-3.5 xl:p-4">
-                          <p className="text-[11px] font-semibold uppercase tracking-[0.22em] text-muted-foreground">
-                            Clinical focus
-                          </p>
-                          <div className="mt-2.5 space-y-2">
-                            {department.focus.map((item) => (
-                              <div key={item} className="flex items-start gap-2 text-sm text-foreground">
-                                <CheckCircle2 size={14} className="mt-0.5 shrink-0 text-primary" />
-                                <span className="leading-[1.55]">{item}</span>
-                              </div>
-                            ))}
-                          </div>
+                      <div className="flex min-h-[9.5rem] flex-col rounded-[1.4rem] border border-border/35 bg-muted/40 p-3.5 xl:p-4">
+                        <p className="shrink-0 text-[11px] font-semibold uppercase tracking-[0.22em] text-muted-foreground">
+                          Clinical focus
+                        </p>
+                        <div className="mt-2.5 flex min-h-0 flex-1 flex-col justify-start space-y-2">
+                          {department.focus.map((item) => (
+                            <div key={item} className="flex items-start gap-2 text-sm text-foreground">
+                              <CheckCircle2 size={14} className="mt-0.5 shrink-0 text-primary" />
+                              <span className="leading-[1.55]">{item}</span>
+                            </div>
+                          ))}
                         </div>
                       </div>
                     </div>
 
-                    <div className="mt-auto pt-7">
+                    <div className="mt-auto shrink-0 pt-7">
                       <Button asChild variant="ghost" className="h-auto rounded-full px-0 text-sm font-medium text-foreground hover:bg-transparent hover:text-primary">
                         <Link to={department.page}>
                           Explore Department
