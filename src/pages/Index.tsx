@@ -322,10 +322,10 @@ const Index = () => {
                         <div className="absolute inset-x-0 bottom-0 h-[54%] bg-gradient-to-t from-foreground/70 via-foreground/22 to-transparent" />
                         <div className="h-[56%] w-[68%] rounded-[1.75rem] border border-dashed border-border/35 bg-background/45" />
                         <div className="absolute inset-x-6 bottom-6 z-10 sm:inset-x-7">
-                          <h3 className="whitespace-nowrap font-serif text-[1.75rem] font-semibold leading-tight text-white sm:text-[1.95rem]">
+                          <h3 className="font-serif text-[1.25rem] font-semibold leading-snug text-white sm:text-[1.35rem] md:text-[1.4rem]">
                             {department.specialist}
                           </h3>
-                          <p className="mt-2 text-sm font-medium text-white/88">{department.role}</p>
+                          <p className="mt-1.5 text-xs font-medium text-white/88 sm:text-sm">{department.role}</p>
                         </div>
                       </div>
                       <span className="sr-only">{department.portraitAlt}</span>
