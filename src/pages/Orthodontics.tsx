@@ -12,6 +12,7 @@ import {
   Waypoints,
 } from "lucide-react";
 import Layout from "@/components/Layout";
+import SectionReveal from "@/components/SectionReveal";
 import SectionHeading from "@/components/SectionHeading";
 import WhatsAppCTA from "@/components/WhatsAppCTA";
 import AnimatedSection from "@/components/AnimatedSection";
@@ -120,14 +121,14 @@ const Orthodontics = () => {
         </div>
       </section>
 
-      <section className="section-surface-base py-16 sm:py-18 md:py-22 xl:py-24">
+      <SectionReveal className="section-surface-base py-16 sm:py-18 md:py-22 xl:py-24">
         <div className={cnPageContainer()}>
           <SectionHeading badge="Compare" title="Compare the treatment paths that fit your case" subtitle="A clearer way to compare the options most patients consider." />
           <TreatmentCompare />
         </div>
-      </section>
+      </SectionReveal>
 
-      <section className="section-surface-soft py-16 sm:py-18 md:py-22 xl:py-24">
+      <SectionReveal className="section-surface-soft py-16 sm:py-18 md:py-22 xl:py-24">
         <div className={cnPageContainer()}>
           <SectionHeading badge="By Life Stage" title="Orthodontics changes with age and growth" subtitle="Timing matters because growth and eruption change the right option." />
           <div className="mx-auto grid max-w-7xl gap-6 md:grid-cols-2 xl:grid-cols-3 xl:gap-8">
@@ -153,9 +154,9 @@ const Orthodontics = () => {
             ))}
           </div>
         </div>
-      </section>
+      </SectionReveal>
 
-      <section className="section-surface-base py-16 sm:py-18 md:py-22 xl:py-24">
+      <SectionReveal className="section-surface-base py-16 sm:py-18 md:py-22 xl:py-24">
         <div className={cnPageContainer()}>
           <SectionHeading badge="Treatment Journey" title="A clear path from consultation to retention" subtitle="A practical view of what happens during treatment." />
           <div className="mx-auto grid max-w-7xl gap-5 sm:grid-cols-2 xl:grid-cols-4 xl:gap-6">
@@ -171,9 +172,9 @@ const Orthodontics = () => {
             ))}
           </div>
         </div>
-      </section>
+      </SectionReveal>
 
-      <section className="section-surface-soft py-16 sm:py-18 md:py-22 xl:py-24">
+      <SectionReveal className="section-surface-soft py-16 sm:py-18 md:py-22 xl:py-24">
         <div className={cnPageContainer()}>
           <SectionHeading badge="Treatment Options" title="Selected appliances and treatment choices" subtitle="Enough detail to help patients decide without overloading the page." />
           <div className="mx-auto grid max-w-6xl gap-5 md:grid-cols-2 xl:gap-6">
@@ -190,9 +191,9 @@ const Orthodontics = () => {
             ))}
           </div>
         </div>
-      </section>
+      </SectionReveal>
 
-      <section className="section-surface-base py-16 sm:py-18 md:py-22 xl:py-24">
+      <SectionReveal className="section-surface-base py-16 sm:py-18 md:py-22 xl:py-24">
         <div className={cnPageContainer()}>
           <AnimatedSection>
             <div className="relative mx-auto max-w-6xl overflow-hidden rounded-3xl bg-gradient-to-r from-primary to-primary/80 p-8 text-center sm:p-10 md:p-14 xl:p-18">
@@ -215,7 +216,7 @@ const Orthodontics = () => {
             </div>
           </AnimatedSection>
         </div>
-      </section>
+      </SectionReveal>
     </Layout>
   );
 };

@@ -17,6 +17,7 @@ import {
   Waypoints,
 } from "lucide-react";
 import Layout from "@/components/Layout";
+import SectionReveal from "@/components/SectionReveal";
 import SectionHeading from "@/components/SectionHeading";
 import WhatsAppCTA from "@/components/WhatsAppCTA";
 import AnimatedSection from "@/components/AnimatedSection";
@@ -259,7 +260,7 @@ const Index = () => {
         </div>
       </section>
 
-      <section className="section-surface-soft py-6 sm:py-8 md:py-10 xl:py-14">
+      <SectionReveal className="section-surface-soft py-6 sm:py-8 md:py-10 xl:py-14">
         <div className={cnPageContainer()}>
           <div className="mb-4 text-center sm:mb-5">
             <span className="inline-block rounded-full border border-primary/15 bg-primary/8 px-4 py-1.5 text-[11px] font-semibold uppercase tracking-widest text-primary sm:text-xs">
@@ -301,9 +302,9 @@ const Index = () => {
             </div>
           </div>
         </div>
-      </section>
+      </SectionReveal>
 
-      <section className="section-surface-base py-14 sm:py-16 md:py-18 xl:py-20">
+      <SectionReveal className="section-surface-base py-14 sm:py-16 md:py-18 xl:py-20">
         <div className={cnPageContainer()}>
           <SectionHeading
             badge="Departments & Specialists"
@@ -393,9 +394,9 @@ const Index = () => {
             ))}
           </div>
         </div>
-      </section>
+      </SectionReveal>
 
-      <section className="section-surface-soft py-16 sm:py-18 md:py-22 xl:py-24">
+      <SectionReveal className="section-surface-soft py-16 sm:py-18 md:py-22 xl:py-24">
         <div className={cnPageContainer()}>
           <div className="mb-8 text-center md:mb-10">
             <span className="inline-block rounded-full border border-primary/15 bg-primary/8 px-4 py-1.5 text-[11px] font-semibold uppercase tracking-widest text-primary sm:text-xs">
@@ -522,9 +523,9 @@ const Index = () => {
             ) : null}
           </AnimatePresence>
         </div>
-      </section>
+      </SectionReveal>
 
-      <section className="section-surface-base py-16 sm:py-18 md:py-22 xl:py-24">
+      <SectionReveal className="section-surface-base py-16 sm:py-18 md:py-22 xl:py-24">
         <div className={cnPageContainer()}>
           <SectionHeading
             badge="Visit Lumident"
@@ -582,9 +583,9 @@ const Index = () => {
             </div>
           </AnimatedSection>
         </div>
-      </section>
+      </SectionReveal>
 
-      <section className="section-surface-soft py-16 sm:py-18 md:py-22 xl:py-24">
+      <SectionReveal className="section-surface-soft py-16 sm:py-18 md:py-22 xl:py-24">
         <div className={cnPageContainer()}>
           <AnimatedSection>
             <div className="mx-auto max-w-6xl">
@@ -628,7 +629,7 @@ const Index = () => {
             </div>
           </AnimatedSection>
         </div>
-      </section>
+      </SectionReveal>
     </Layout>
   );
 };

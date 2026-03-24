@@ -9,6 +9,7 @@ import {
   Stethoscope,
 } from "lucide-react";
 import Layout from "@/components/Layout";
+import SectionReveal from "@/components/SectionReveal";
 import SectionHeading from "@/components/SectionHeading";
 import WhatsAppCTA from "@/components/WhatsAppCTA";
 import AnimatedSection from "@/components/AnimatedSection";
@@ -138,7 +139,7 @@ const Pediatric = () => {
         </div>
       </section>
 
-      <section className="section-surface-base py-16 sm:py-18 md:py-22 xl:py-24">
+      <SectionReveal className="section-surface-base py-16 sm:py-18 md:py-22 xl:py-24">
         <div className={cnPageContainer()}>
           <SectionHeading
             badge="Core Services"
@@ -265,9 +266,9 @@ const Pediatric = () => {
             </div>
           </div>
         </div>
-      </section>
+      </SectionReveal>
 
-      <section className="section-surface-soft py-16 sm:py-18 md:py-22 xl:py-24">
+      <SectionReveal className="section-surface-soft py-16 sm:py-18 md:py-22 xl:py-24">
         <div className={cnPageContainer()}>
           <SectionHeading badge="First Visit" title="Start early, stay ahead" subtitle="A first visit around age one helps assess risk, guide hygiene, and make future visits easier." />
           <div className="mx-auto grid max-w-6xl gap-6 xl:grid-cols-[1.08fr_0.92fr]">
@@ -301,9 +302,9 @@ const Pediatric = () => {
             </AnimatedSection>
           </div>
         </div>
-      </section>
+      </SectionReveal>
 
-      <section className="section-surface-base py-16 sm:py-18 md:py-22 xl:py-24">
+      <SectionReveal className="section-surface-base py-16 sm:py-18 md:py-22 xl:py-24">
         <div className={cnPageContainer()}>
           <SectionHeading badge="Growth Timeline" title="Key milestones in oral development" subtitle="Knowing what is normal helps families spot concerns earlier." />
           <div className="mx-auto max-w-4xl">
@@ -328,9 +329,9 @@ const Pediatric = () => {
             </div>
           </div>
         </div>
-      </section>
+      </SectionReveal>
 
-      <section className="section-surface-soft py-16 sm:py-18 md:py-22 xl:py-24">
+      <SectionReveal className="section-surface-soft py-16 sm:py-18 md:py-22 xl:py-24">
         <div className={cnPageContainer()}>
           <SectionHeading badge="Guidance" title="Helpful guidance for parents" subtitle="A few practical reminders between visits." />
           <div className="mx-auto max-w-4xl">
@@ -348,7 +349,7 @@ const Pediatric = () => {
             </AnimatedSection>
           </div>
         </div>
-      </section>
+      </SectionReveal>
 
     </Layout>
   );
