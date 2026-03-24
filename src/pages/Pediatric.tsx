@@ -14,6 +14,7 @@ import WhatsAppCTA from "@/components/WhatsAppCTA";
 import AnimatedSection from "@/components/AnimatedSection";
 import { Card, CardContent } from "@/components/ui/card";
 import { departmentBooking } from "@/lib/lumident";
+import { cnPageContainer } from "@/lib/pageLayout";
 
 const foundationItems = [
   {
@@ -89,16 +90,16 @@ const Pediatric = () => {
   return (
     <Layout>
       <section className="relative hero-gradient flex items-center">
-        <div className="container mx-auto px-6 py-16 sm:py-18 md:py-20 xl:py-24">
+        <div className={cnPageContainer("py-16 sm:py-18 md:py-20 xl:py-24")}>
           <div className="grid items-center gap-10 lg:grid-cols-[0.95fr_1.05fr] lg:gap-14 xl:gap-18">
-            <div className="max-w-xl">
+            <div className="max-w-2xl">
               <motion.span initial={{ opacity: 0, y: 10 }} animate={{ opacity: 1, y: 0 }} className="inline-block mb-4 px-4 py-1.5 rounded-full text-xs font-semibold uppercase tracking-widest bg-primary/8 text-primary border border-primary/15">
                 Pediatric Dentistry
               </motion.span>
-              <motion.h1 initial={{ opacity: 0, y: 30 }} animate={{ opacity: 1, y: 0 }} transition={{ delay: 0.1, duration: 0.7 }} className="font-serif text-4xl font-semibold leading-[1.05] text-foreground sm:text-5xl md:text-6xl xl:max-w-[11ch]">
+              <motion.h1 initial={{ opacity: 0, y: 30 }} animate={{ opacity: 1, y: 0 }} transition={{ delay: 0.1, duration: 0.7 }} className="font-serif text-4xl font-semibold leading-[1.05] text-foreground sm:text-5xl md:text-6xl">
                 Gentle care for <span className="gradient-text">growing smiles.</span>
               </motion.h1>
-              <motion.p initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ delay: 0.25 }} className="mt-5 max-w-xl text-base leading-relaxed text-muted-foreground sm:text-lg">
+              <motion.p initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ delay: 0.25 }} className="mt-5 max-w-2xl text-base leading-relaxed text-muted-foreground sm:text-lg">
                 Warm, specialist-led care from the first tooth onward, with guidance that helps parents feel clear and prepared.
               </motion.p>
               <motion.div initial={{ opacity: 0 }} animate={{ opacity: 1 }} transition={{ delay: 0.4 }} className="mt-7 flex flex-wrap gap-3">
@@ -138,7 +139,7 @@ const Pediatric = () => {
       </section>
 
       <section className="section-surface-base py-16 sm:py-18 md:py-22 xl:py-24">
-        <div className="container mx-auto px-6">
+        <div className={cnPageContainer()}>
           <SectionHeading
             badge="Core Services"
             title="Child-focused care, structured around what matters most early"
@@ -267,7 +268,7 @@ const Pediatric = () => {
       </section>
 
       <section className="section-surface-soft py-16 sm:py-18 md:py-22 xl:py-24">
-        <div className="container mx-auto px-6">
+        <div className={cnPageContainer()}>
           <SectionHeading badge="First Visit" title="Start early, stay ahead" subtitle="A first visit around age one helps assess risk, guide hygiene, and make future visits easier." />
           <div className="mx-auto grid max-w-6xl gap-6 xl:grid-cols-[1.08fr_0.92fr]">
             <AnimatedSection>
@@ -303,7 +304,7 @@ const Pediatric = () => {
       </section>
 
       <section className="section-surface-base py-16 sm:py-18 md:py-22 xl:py-24">
-        <div className="container mx-auto px-6">
+        <div className={cnPageContainer()}>
           <SectionHeading badge="Growth Timeline" title="Key milestones in oral development" subtitle="Knowing what is normal helps families spot concerns earlier." />
           <div className="mx-auto max-w-4xl">
             <div className="relative">
@@ -330,7 +331,7 @@ const Pediatric = () => {
       </section>
 
       <section className="section-surface-soft py-16 sm:py-18 md:py-22 xl:py-24">
-        <div className="container mx-auto px-6">
+        <div className={cnPageContainer()}>
           <SectionHeading badge="Guidance" title="Helpful guidance for parents" subtitle="A few practical reminders between visits." />
           <div className="mx-auto max-w-4xl">
             <AnimatedSection>

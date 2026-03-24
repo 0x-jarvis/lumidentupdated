@@ -3,6 +3,7 @@ import { Link, useLocation } from "react-router-dom";
 import { Menu, X, Phone } from "lucide-react";
 import { motion, AnimatePresence } from "framer-motion";
 import { cn } from "@/lib/utils";
+import { cnPageContainer } from "@/lib/pageLayout";
 import { Button } from "@/components/ui/button";
 import { clinicInfo } from "@/lib/lumident";
 
@@ -19,7 +20,7 @@ const Navbar = () => {
 
   return (
     <nav className="fixed top-0 left-0 right-0 z-50 glass-nav">
-      <div className="container mx-auto flex items-center justify-between h-18 px-6 py-3">
+      <div className={cnPageContainer("flex h-18 items-center justify-between py-3")}>
         <Link to="/" className="flex items-center">
           <img
             src="/lumident-logo.svg"
@@ -74,7 +75,7 @@ const Navbar = () => {
             transition={{ duration: 0.3, ease: "easeInOut" }}
             className="md:hidden overflow-hidden border-t border-border/30 bg-background/95 backdrop-blur-xl"
           >
-            <div className="px-6 py-4 space-y-1">
+            <div className={cnPageContainer("space-y-1 py-4")}>
               {links.map((l, i) => (
                 <motion.div
                   key={l.to}

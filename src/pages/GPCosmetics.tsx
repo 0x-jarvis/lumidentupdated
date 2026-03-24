@@ -18,6 +18,7 @@ import WhatsAppCTA from "@/components/WhatsAppCTA";
 import AnimatedSection from "@/components/AnimatedSection";
 import { Card, CardContent } from "@/components/ui/card";
 import { departmentBooking } from "@/lib/lumident";
+import { cnPageContainer } from "@/lib/pageLayout";
 
 const coreServices = [
   { title: "Teeth whitening", icon: Sun, desc: "Professional whitening planned around sensitivity, current shade, and the type of result you want." },
@@ -75,16 +76,16 @@ const GPCosmetics = () => {
   return (
     <Layout>
       <section className="relative hero-gradient flex items-center">
-        <div className="container mx-auto px-6 py-16 sm:py-18 md:py-20 xl:py-24">
+        <div className={cnPageContainer("py-16 sm:py-18 md:py-20 xl:py-24")}>
           <div className="grid items-center gap-10 lg:grid-cols-[0.95fr_1.05fr] lg:gap-14 xl:gap-20">
-            <div className="max-w-xl">
+            <div className="max-w-2xl">
               <motion.span initial={{ opacity: 0, y: 10 }} animate={{ opacity: 1, y: 0 }} className="inline-block mb-4 px-4 py-1.5 rounded-full text-xs font-semibold uppercase tracking-widest bg-primary/8 text-primary border border-primary/15">
                 Adults & Cosmetics
               </motion.span>
-              <motion.h1 initial={{ opacity: 0, y: 30 }} animate={{ opacity: 1, y: 0 }} transition={{ delay: 0.1, duration: 0.7 }} className="font-serif text-4xl font-semibold leading-[1.05] text-foreground sm:text-5xl md:text-6xl xl:max-w-[11ch]">
+              <motion.h1 initial={{ opacity: 0, y: 30 }} animate={{ opacity: 1, y: 0 }} transition={{ delay: 0.1, duration: 0.7 }} className="font-serif text-4xl font-semibold leading-[1.05] text-foreground sm:text-5xl md:text-6xl">
                 Adult dental care with a <span className="gradient-text">refined, realistic finish.</span>
               </motion.h1>
-              <motion.p initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ delay: 0.25 }} className="mt-5 max-w-xl text-base leading-relaxed text-muted-foreground sm:text-lg">
+              <motion.p initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ delay: 0.25 }} className="mt-5 max-w-2xl text-base leading-relaxed text-muted-foreground sm:text-lg">
                 General, restorative, and cosmetic dentistry planned around health first and refined toward natural-looking results.
               </motion.p>
               <motion.div initial={{ opacity: 0 }} animate={{ opacity: 1 }} transition={{ delay: 0.4 }} className="mt-7 flex flex-wrap gap-3">
@@ -125,7 +126,7 @@ const GPCosmetics = () => {
       </section>
 
       <section className="section-surface-base py-16 sm:py-18 md:py-22 xl:py-24">
-        <div className="container mx-auto px-6">
+        <div className={cnPageContainer()}>
           <SectionHeading badge="Core Services" title="Coverage that goes beyond a cosmetic pitch" subtitle="A tighter view of the adult services patients ask about most." />
           <div className="mx-auto grid max-w-7xl gap-5 sm:grid-cols-2 xl:grid-cols-3 xl:gap-6">
             {coreServices.map((service, i) => (
@@ -142,7 +143,7 @@ const GPCosmetics = () => {
       </section>
 
       <section className="section-surface-soft py-16 sm:py-18 md:py-22 xl:py-24">
-        <div className="container mx-auto px-6">
+        <div className={cnPageContainer()}>
           <SectionHeading badge="Three Pillars" title="Prevention, restoration, and aesthetics should work together" subtitle="Each pillar keeps the clinical logic clear." />
           <div className="mx-auto grid max-w-7xl gap-6 md:grid-cols-2 xl:grid-cols-3 xl:gap-8">
             {pillars.map((pillar, i) => (
@@ -171,7 +172,7 @@ const GPCosmetics = () => {
       </section>
 
       <section className="section-surface-base py-16 sm:py-18 md:py-22 xl:py-24">
-        <div className="container mx-auto px-6">
+        <div className={cnPageContainer()}>
           <SectionHeading badge="Selected Treatments" title="A few treatment paths worth understanding before you book" subtitle="A concise guide to the treatment paths adults compare most often." />
           <div className="mx-auto grid max-w-6xl gap-5 md:grid-cols-2 xl:gap-6">
             {selectedTreatments.map((treatment, i) => (
@@ -190,7 +191,7 @@ const GPCosmetics = () => {
       </section>
 
       <section className="section-surface-soft py-16 sm:py-18 md:py-22 xl:py-24">
-        <div className="container mx-auto px-6">
+        <div className={cnPageContainer()}>
           <AnimatedSection>
             <div className="relative mx-auto max-w-6xl overflow-hidden rounded-3xl bg-gradient-to-r from-primary to-primary/80 p-8 text-center sm:p-10 md:p-14 xl:p-18">
               <div className="absolute inset-0 bg-[radial-gradient(circle_at_70%_30%,rgba(255,255,255,0.12),transparent_60%)]" />

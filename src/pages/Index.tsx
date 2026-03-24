@@ -25,6 +25,7 @@ import DepartmentFinder from "@/components/DepartmentFinder";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
 import { clinicInfo, departmentBooking } from "@/lib/lumident";
+import { cnPageContainer } from "@/lib/pageLayout";
 
 const heroImages = [
   "https://i.ibb.co/dwfYK2LH/DSC-0615-edited.jpg",
@@ -180,14 +181,14 @@ const Index = () => {
   return (
     <Layout>
       <section className="relative hero-gradient flex items-center">
-        <div className="container mx-auto px-6 pt-0 pb-5 sm:pb-7 md:pt-1 md:pb-8 lg:pt-2 lg:pb-10 xl:pt-4 xl:pb-12 2xl:pt-6 2xl:pb-14">
+        <div className={cnPageContainer("pt-0 pb-5 sm:pb-7 md:pt-1 md:pb-8 lg:pt-2 lg:pb-10 xl:pt-4 xl:pb-12 2xl:pt-6 2xl:pb-14")}>
           <div className="grid items-center gap-6 lg:gap-10 xl:grid-cols-[minmax(0,0.9fr)_minmax(0,1.1fr)] xl:gap-16 2xl:gap-20">
-            <div className="max-w-xl xl:max-w-2xl">
+            <div className="max-w-2xl">
               <motion.h1
                 initial={{ opacity: 0, y: 30 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.7, delay: 0.1 }}
-                className="font-serif text-[2.8rem] font-semibold leading-[1.03] tracking-tight text-foreground sm:text-[3.35rem] md:text-[4.15rem] xl:max-w-[12ch] xl:text-[clamp(3.6rem,4.35vw,5.35rem)]"
+                className="font-serif text-[2.8rem] font-semibold leading-[1.03] tracking-tight text-foreground sm:text-[3.35rem] md:text-[4.15rem] xl:text-[clamp(3.6rem,4.35vw,5.35rem)]"
               >
                 Trusted specialist care for children and adults, with{" "}
                 <span className="gradient-text gradient-text-shimmer">the calm every visit deserves.</span>
@@ -197,7 +198,7 @@ const Index = () => {
                 initial={{ opacity: 0, y: 20 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.6, delay: 0.25 }}
-                className="mt-5 max-w-xl text-base leading-relaxed text-muted-foreground sm:text-lg lg:text-[1.15rem]"
+                className="mt-5 max-w-2xl text-base leading-relaxed text-muted-foreground sm:text-lg lg:text-[1.15rem]"
               >
                 Lumident brings pediatric, orthodontic, and adult dental care together in Beirut, with clear guidance from the first visit onward.
               </motion.p>
@@ -259,7 +260,7 @@ const Index = () => {
       </section>
 
       <section className="section-surface-soft py-6 sm:py-8 md:py-10 xl:py-14">
-        <div className="container mx-auto px-6">
+        <div className={cnPageContainer()}>
           <div className="mb-4 text-center sm:mb-5">
             <span className="inline-block rounded-full border border-primary/15 bg-primary/8 px-4 py-1.5 text-[11px] font-semibold uppercase tracking-widest text-primary sm:text-xs">
               Why Lumident
@@ -278,7 +279,7 @@ const Index = () => {
               </AnimatedSection>
             ))}
             </div>
-            <div className="px-6 py-7 sm:px-8 sm:py-8 lg:px-10 lg:py-10 xl:px-12">
+            <div className="py-7 sm:py-8 lg:py-10">
               <SectionHeading
                 title="A premium clinic experience with clinical clarity"
                 subtitle="Specialist-led decisions, clear guidance, and modern diagnostics shape every visit."
@@ -303,7 +304,7 @@ const Index = () => {
       </section>
 
       <section className="section-surface-base py-14 sm:py-16 md:py-18 xl:py-20">
-        <div className="container mx-auto px-6">
+        <div className={cnPageContainer()}>
           <SectionHeading
             badge="Departments & Specialists"
             title="Meet the clinical leads behind each department"
@@ -316,12 +317,12 @@ const Index = () => {
                   <CardContent className="flex h-full min-h-0 flex-col p-5 sm:p-6 md:p-7 xl:p-8">
                     <div className={`relative shrink-0 overflow-hidden rounded-[2rem] border border-border/30 bg-gradient-to-br ${department.color} p-6 sm:p-7`}>
                       <div className="absolute inset-0 bg-[radial-gradient(circle_at_top,rgba(255,255,255,0.45),transparent_55%)]" />
-                      <div className="relative flex aspect-[4/4.8] items-center justify-center overflow-hidden rounded-[1.6rem] border border-white/35 bg-background/80 px-6 py-5 shadow-[inset_0_1px_0_rgba(255,255,255,0.6)] sm:px-7">
-                        <div className="absolute inset-x-6 top-6 h-px bg-gradient-to-r from-transparent via-white/60 to-transparent sm:inset-x-7" />
-                        <div className="absolute inset-x-6 bottom-6 h-px bg-gradient-to-r from-transparent via-border/40 to-transparent sm:inset-x-7" />
+                      <div className="relative flex aspect-[4/4.8] items-center justify-center overflow-hidden rounded-[1.6rem] border border-white/35 bg-background/80 px-4 py-5 shadow-[inset_0_1px_0_rgba(255,255,255,0.6)] sm:px-5 md:px-4">
+                        <div className="absolute inset-x-4 top-6 h-px bg-gradient-to-r from-transparent via-white/60 to-transparent sm:inset-x-5 md:inset-x-4" />
+                        <div className="absolute inset-x-4 bottom-6 h-px bg-gradient-to-r from-transparent via-border/40 to-transparent sm:inset-x-5 md:inset-x-4" />
                         <div className="absolute inset-x-0 bottom-0 h-[54%] bg-gradient-to-t from-foreground/70 via-foreground/22 to-transparent" />
                         <div className="h-[56%] w-[68%] rounded-[1.75rem] border border-dashed border-border/35 bg-background/45" />
-                        <div className="absolute inset-x-6 bottom-6 z-10 min-w-0 sm:inset-x-7">
+                        <div className="absolute inset-x-4 bottom-6 z-10 min-w-0 sm:inset-x-5 md:inset-x-4">
                           <h3 className="truncate font-serif text-[1.05rem] font-semibold leading-none tracking-tight text-white sm:text-[1.1rem] md:text-[1.12rem]">
                             {department.specialist}
                           </h3>
@@ -395,7 +396,7 @@ const Index = () => {
       </section>
 
       <section className="section-surface-soft py-16 sm:py-18 md:py-22 xl:py-24">
-        <div className="container mx-auto px-6">
+        <div className={cnPageContainer()}>
           <div className="mb-8 text-center md:mb-10">
             <span className="inline-block rounded-full border border-primary/15 bg-primary/8 px-4 py-1.5 text-[11px] font-semibold uppercase tracking-widest text-primary sm:text-xs">
               Guided Start
@@ -524,7 +525,7 @@ const Index = () => {
       </section>
 
       <section className="section-surface-base py-16 sm:py-18 md:py-22 xl:py-24">
-        <div className="container mx-auto px-6">
+        <div className={cnPageContainer()}>
           <SectionHeading
             badge="Visit Lumident"
             title="Easy to reach, easy to understand"
@@ -584,7 +585,7 @@ const Index = () => {
       </section>
 
       <section className="section-surface-soft py-16 sm:py-18 md:py-22 xl:py-24">
-        <div className="container mx-auto px-6">
+        <div className={cnPageContainer()}>
           <AnimatedSection>
             <div className="mx-auto max-w-6xl">
               <div className="mb-8 text-center md:mb-10">

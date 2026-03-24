@@ -8,12 +8,16 @@ export default {
   theme: {
     container: {
       center: true,
-      padding: "2rem",
+      padding: "0",
       screens: {
         "2xl": "1400px",
       },
     },
     extend: {
+      spacing: {
+        15: "3.75rem",
+        18: "4.5rem",
+      },
       fontFamily: {
         serif: ["Playfair Display", "Georgia", "serif"],
         sans: ["Inter", "system-ui", "sans-serif"],

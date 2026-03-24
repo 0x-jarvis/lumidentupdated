@@ -18,6 +18,7 @@ import AnimatedSection from "@/components/AnimatedSection";
 import TreatmentCompare from "@/components/TreatmentCompare";
 import { Card, CardContent } from "@/components/ui/card";
 import { departmentBooking } from "@/lib/lumident";
+import { cnPageContainer } from "@/lib/pageLayout";
 
 const patients = [
   {
@@ -70,16 +71,16 @@ const Orthodontics = () => {
   return (
     <Layout>
       <section className="relative hero-gradient flex items-center">
-        <div className="container mx-auto px-6 py-16 sm:py-18 md:py-20 xl:py-24">
+        <div className={cnPageContainer("py-16 sm:py-18 md:py-20 xl:py-24")}>
           <div className="grid items-center gap-10 lg:grid-cols-[0.95fr_1.05fr] lg:gap-14 xl:gap-20">
-            <div className="max-w-xl">
+            <div className="max-w-2xl">
               <motion.span initial={{ opacity: 0, y: 10 }} animate={{ opacity: 1, y: 0 }} className="inline-block mb-4 px-4 py-1.5 rounded-full text-xs font-semibold uppercase tracking-widest bg-primary/8 text-primary border border-primary/15">
                 Orthodontics
               </motion.span>
-              <motion.h1 initial={{ opacity: 0, y: 30 }} animate={{ opacity: 1, y: 0 }} transition={{ delay: 0.1, duration: 0.7 }} className="font-serif text-4xl font-semibold leading-[1.05] text-foreground sm:text-5xl md:text-6xl xl:max-w-[11ch]">
+              <motion.h1 initial={{ opacity: 0, y: 30 }} animate={{ opacity: 1, y: 0 }} transition={{ delay: 0.1, duration: 0.7 }} className="font-serif text-4xl font-semibold leading-[1.05] text-foreground sm:text-5xl md:text-6xl">
                 Practical alignment planning <span className="gradient-text">at every age.</span>
               </motion.h1>
-              <motion.p initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ delay: 0.25 }} className="mt-5 max-w-xl text-base leading-relaxed text-muted-foreground sm:text-lg">
+              <motion.p initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ delay: 0.25 }} className="mt-5 max-w-2xl text-base leading-relaxed text-muted-foreground sm:text-lg">
                 Modern orthodontic care that explains braces, aligners, and growth-guidance appliances with clarity.
               </motion.p>
               <motion.div initial={{ opacity: 0 }} animate={{ opacity: 1 }} transition={{ delay: 0.4 }} className="mt-7 flex flex-wrap gap-3">
@@ -120,14 +121,14 @@ const Orthodontics = () => {
       </section>
 
       <section className="section-surface-base py-16 sm:py-18 md:py-22 xl:py-24">
-        <div className="container mx-auto px-6">
+        <div className={cnPageContainer()}>
           <SectionHeading badge="Compare" title="Compare the treatment paths that fit your case" subtitle="A clearer way to compare the options most patients consider." />
           <TreatmentCompare />
         </div>
       </section>
 
       <section className="section-surface-soft py-16 sm:py-18 md:py-22 xl:py-24">
-        <div className="container mx-auto px-6">
+        <div className={cnPageContainer()}>
           <SectionHeading badge="By Life Stage" title="Orthodontics changes with age and growth" subtitle="Timing matters because growth and eruption change the right option." />
           <div className="mx-auto grid max-w-7xl gap-6 md:grid-cols-2 xl:grid-cols-3 xl:gap-8">
             {patients.map((patient, i) => (
@@ -155,7 +156,7 @@ const Orthodontics = () => {
       </section>
 
       <section className="section-surface-base py-16 sm:py-18 md:py-22 xl:py-24">
-        <div className="container mx-auto px-6">
+        <div className={cnPageContainer()}>
           <SectionHeading badge="Treatment Journey" title="A clear path from consultation to retention" subtitle="A practical view of what happens during treatment." />
           <div className="mx-auto grid max-w-7xl gap-5 sm:grid-cols-2 xl:grid-cols-4 xl:gap-6">
             {journey.map((step, i) => (
@@ -173,7 +174,7 @@ const Orthodontics = () => {
       </section>
 
       <section className="section-surface-soft py-16 sm:py-18 md:py-22 xl:py-24">
-        <div className="container mx-auto px-6">
+        <div className={cnPageContainer()}>
           <SectionHeading badge="Treatment Options" title="Selected appliances and treatment choices" subtitle="Enough detail to help patients decide without overloading the page." />
           <div className="mx-auto grid max-w-6xl gap-5 md:grid-cols-2 xl:gap-6">
             {options.map((option, i) => (
@@ -192,7 +193,7 @@ const Orthodontics = () => {
       </section>
 
       <section className="section-surface-base py-16 sm:py-18 md:py-22 xl:py-24">
-        <div className="container mx-auto px-6">
+        <div className={cnPageContainer()}>
           <AnimatedSection>
             <div className="relative mx-auto max-w-6xl overflow-hidden rounded-3xl bg-gradient-to-r from-primary to-primary/80 p-8 text-center sm:p-10 md:p-14 xl:p-18">
               <div className="absolute inset-0 bg-[radial-gradient(circle_at_30%_50%,rgba(255,255,255,0.1),transparent_60%)]" />

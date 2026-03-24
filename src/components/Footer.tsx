@@ -1,6 +1,7 @@
 import { Link } from "react-router-dom";
 import { MapPin, Clock, Phone, MessageCircle, ArrowUpRight } from "lucide-react";
 import AnimatedSection from "./AnimatedSection";
+import { cnPageContainer } from "@/lib/pageLayout";
 import { clinicInfo } from "@/lib/lumident";
 
 const footerLinks = [
@@ -16,7 +17,7 @@ const Footer = () => (
     <div className="divider-gradient" />
 
     <div className="bg-foreground/[0.03] pt-16 pb-8">
-      <div className="container mx-auto px-6">
+      <div className={cnPageContainer()}>
         <AnimatedSection>
           <div className="grid md:grid-cols-4 gap-12 mb-12">
             {/* Brand */}
