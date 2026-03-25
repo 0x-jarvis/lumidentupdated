@@ -138,28 +138,6 @@ const stats = [
   { value: 25000, suffix: "+", label: "Patient Visits" },
 ];
 
-const visitDetails = [
-  {
-    title: "Visit the clinic",
-    body: clinicInfo.location,
-    icon: MapPin,
-    href: clinicInfo.mapUrl,
-    cta: "Open in Maps",
-  },
-  {
-    title: "Clinic hours",
-    body: `${clinicInfo.hours.weekdays} · ${clinicInfo.hours.weekends}`,
-    icon: Clock3,
-  },
-  {
-    title: "Call the front desk",
-    body: clinicInfo.phoneDisplay,
-    icon: Phone,
-    href: clinicInfo.phoneHref,
-    cta: "Call Lumident",
-  },
-];
-
 const Index = () => {
   const [activeImage, setActiveImage] = useState(0);
   const [finderOpen, setFinderOpen] = useState(false);
@@ -183,13 +161,13 @@ const Index = () => {
     <Layout>
       <section className="relative hero-gradient flex items-center">
         <div className={cnPageContainer("pt-0 pb-5 sm:pb-7 md:pt-1 md:pb-8 lg:pt-2 lg:pb-10 xl:pt-4 xl:pb-12 2xl:pt-6 2xl:pb-14")}>
-          <div className="grid items-center gap-6 lg:gap-10 xl:grid-cols-[minmax(0,0.9fr)_minmax(0,1.1fr)] xl:gap-16 2xl:gap-20">
-            <div className="max-w-2xl">
+          <div className="grid grid-cols-[minmax(0,1.02fr)_minmax(0,0.88fr)] items-center gap-3 sm:gap-5 md:gap-6 lg:gap-10 xl:grid-cols-[minmax(0,0.9fr)_minmax(0,1.1fr)] xl:gap-16 2xl:gap-20">
+            <div className="min-w-0 max-w-2xl">
               <motion.h1
                 initial={{ opacity: 0, y: 30 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.7, delay: 0.1 }}
-                className="font-serif text-[2.8rem] font-semibold leading-[1.03] tracking-tight text-foreground sm:text-[3.35rem] md:text-[4.15rem] xl:text-[clamp(3.6rem,4.35vw,5.35rem)]"
+                className="font-serif text-[2.15rem] font-semibold leading-[1.03] tracking-tight text-foreground sm:text-[3.35rem] md:text-[4.15rem] xl:text-[clamp(3.6rem,4.35vw,5.35rem)]"
               >
                 Trusted specialist care for children and adults, with{" "}
                 <span className="gradient-text gradient-text-shimmer">the calm every visit deserves.</span>
@@ -209,9 +187,9 @@ const Index = () => {
               initial={{ opacity: 0, scale: 0.95 }}
               animate={{ opacity: 1, scale: 1 }}
               transition={{ duration: 0.8, delay: 0.3 }}
-              className="w-full"
+              className="w-full min-w-0"
             >
-              <div className="relative mx-auto w-full max-w-[620px] px-0 sm:max-w-[680px] lg:max-w-[760px] xl:max-w-[840px] 2xl:max-w-[900px]">
+              <div className="relative mx-auto w-full min-w-0 max-w-full px-0 sm:max-w-[680px] lg:max-w-[760px] xl:max-w-[840px] 2xl:max-w-[900px]">
                 <div className="absolute inset-x-[4%] top-14 h-[56%] rounded-[34%] bg-primary/6 blur-3xl sm:top-16 xl:top-20" />
                 <motion.div
                   animate={{ y: [0, -6, 0] }}
@@ -533,49 +511,88 @@ const Index = () => {
             subtitle="Useful details upfront, from clinic location to first-visit expectations."
           />
           <AnimatedSection>
-            <div className="mx-auto grid max-w-7xl gap-5 xl:grid-cols-[1.15fr_0.85fr]">
-              <div className="glass-card bg-card/72 p-7 md:p-8 xl:p-10">
-                <div className="mb-6">
-                  <p className="text-[11px] font-semibold uppercase tracking-[0.24em] text-primary">Visit essentials</p>
-                  <h3 className="mt-3 font-serif text-2xl font-semibold text-foreground">The practical details patients usually look for first</h3>
-                </div>
-                <div className="grid gap-4 sm:grid-cols-2 xl:grid-cols-3">
-                  {visitDetails.map((detail) => (
-                    <div key={detail.title} className="rounded-2xl border border-border/25 bg-background/48 p-5">
-                      <detail.icon size={18} className="mb-3 text-primary" />
-                      <p className="mb-2 text-sm font-semibold text-foreground">{detail.title}</p>
-                      <p className="text-sm leading-relaxed text-muted-foreground">{detail.body}</p>
-                      {detail.href && detail.cta ? (
-                        <a
-                          href={detail.href}
-                          target={detail.href.startsWith("http") ? "_blank" : undefined}
-                          rel="noopener noreferrer"
-                          className="mt-3 inline-flex items-center gap-1 text-sm font-medium text-primary"
-                        >
-                          {detail.cta}
-                          <ArrowRight size={14} />
-                        </a>
-                      ) : null}
+            <div className="mx-auto max-w-7xl rounded-[2.4rem] border border-border/28 bg-card/52 p-7 shadow-[0_18px_48px_rgba(15,23,42,0.05)] md:p-9 xl:grid xl:grid-cols-[1.08fr_0.92fr] xl:gap-12 xl:p-12">
+              <div className="xl:border-r xl:border-border/18 xl:pr-12">
+                <p className="text-[11px] font-semibold uppercase tracking-[0.24em] text-primary">Clinic details</p>
+                <h3 className="mt-4 max-w-[16ch] font-serif text-[2rem] font-semibold leading-tight text-foreground md:text-[2.4rem]">
+                  Everything important, in one clear place.
+                </h3>
+
+                <div className="mt-8 space-y-6">
+                  <div>
+                    <div className="flex items-center gap-2 text-[11px] font-semibold uppercase tracking-[0.24em] text-muted-foreground">
+                      <MapPin size={15} className="text-primary" />
+                      Address
                     </div>
-                  ))}
+                    <p className="mt-2 max-w-xl text-[1.2rem] font-medium leading-relaxed text-foreground md:text-[1.35rem]">
+                      {clinicInfo.location}
+                    </p>
+                  </div>
+
+                  <div className="grid gap-5 sm:grid-cols-2">
+                    <div>
+                      <div className="flex items-center gap-2 text-[11px] font-semibold uppercase tracking-[0.24em] text-muted-foreground">
+                        <Phone size={15} className="text-primary" />
+                        Phone
+                      </div>
+                      <p className="mt-2 text-[1.3rem] font-semibold text-foreground md:text-[1.45rem]">
+                        {clinicInfo.phoneDisplay}
+                      </p>
+                    </div>
+
+                    <div>
+                      <div className="flex items-center gap-2 text-[11px] font-semibold uppercase tracking-[0.24em] text-muted-foreground">
+                        <Clock3 size={15} className="text-primary" />
+                        Opening hours
+                      </div>
+                      <p className="mt-2 text-base leading-relaxed text-foreground">
+                        {clinicInfo.hours.weekdays}
+                      </p>
+                      <p className="text-sm leading-relaxed text-muted-foreground">
+                        {clinicInfo.hours.weekends}
+                      </p>
+                    </div>
+                  </div>
+                </div>
+
+                <div className="mt-8 flex flex-col gap-3 sm:flex-row sm:flex-wrap">
+                  <a
+                    href={clinicInfo.mapUrl}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="inline-flex items-center justify-center gap-2 rounded-full bg-primary px-5 py-3 text-sm font-semibold text-primary-foreground transition-colors hover:bg-primary/90"
+                  >
+                    Open in Maps
+                    <ArrowRight size={15} />
+                  </a>
+                  <a
+                    href={clinicInfo.phoneHref}
+                    className="inline-flex items-center justify-center gap-2 rounded-full border border-border/30 bg-background/62 px-5 py-3 text-sm font-semibold text-foreground transition-colors hover:bg-background/82"
+                  >
+                    Call Lumident
+                    <ArrowRight size={15} />
+                  </a>
                 </div>
               </div>
 
-              <div className="glass-card bg-card/68 p-7 md:p-8 xl:p-10">
-                <p className="text-[11px] font-semibold uppercase tracking-[0.24em] text-primary">First visit</p>
-                <h3 className="mt-3 font-serif text-2xl font-semibold text-foreground">A clear start, without unnecessary steps</h3>
-                <p className="mt-4 text-sm leading-relaxed text-muted-foreground">
-                  Most visits begin with a focused consultation, records when needed, and clear direction on the next step.
+              <div className="mt-10 xl:mt-0">
+                <p className="text-[11px] font-semibold uppercase tracking-[0.24em] text-primary">Your first visit</p>
+                <h3 className="mt-4 font-serif text-[1.8rem] font-semibold text-foreground md:text-[2.1rem]">
+                  A clear start, without unnecessary steps.
+                </h3>
+                <p className="mt-3 max-w-md text-sm leading-relaxed text-muted-foreground">
+                  Most visits begin with a focused consultation and a clear sense of what comes next.
                 </p>
-                <div className="mt-6 space-y-3">
+
+                <div className="mt-8 space-y-5">
                   {[
-                    "Review the reason for your visit and the right department.",
+                    "Review the reason for your visit and confirm the right department.",
                     "Take records or imaging only when they support diagnosis.",
                     "Leave with a clear next step, timing, and treatment direction.",
                   ].map((item) => (
-                    <div key={item} className="flex items-start gap-3 rounded-2xl border border-border/20 bg-background/52 p-4">
+                    <div key={item} className="flex items-start gap-4 border-b border-border/18 pb-5 last:border-b-0 last:pb-0">
                       <CheckCircle2 size={16} className="mt-0.5 shrink-0 text-primary" />
-                      <p className="text-sm leading-relaxed text-foreground/90">{item}</p>
+                      <p className="text-sm leading-relaxed text-foreground/88">{item}</p>
                     </div>
                   ))}
                 </div>
