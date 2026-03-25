@@ -90,8 +90,8 @@ const guidanceCards = [
 const Pediatric = () => {
   return (
     <Layout>
-      <section className="relative hero-gradient flex items-center">
-        <div className={cnPageContainer("py-16 sm:py-18 md:py-20 xl:py-24")}>
+      <section className="relative hero-gradient flex min-h-[calc(100svh-var(--nav-h))] snap-start flex-col justify-start">
+        <div className={cnPageContainer("pt-3 pb-10 sm:pt-4 sm:pb-12 md:pt-5 md:pb-14 xl:pt-6 xl:pb-16")}>
           <div className="grid items-center gap-10 lg:grid-cols-[0.95fr_1.05fr] lg:gap-14 xl:gap-18">
             <div className="max-w-2xl">
               <motion.span initial={{ opacity: 0, y: 10 }} animate={{ opacity: 1, y: 0 }} className="inline-block mb-4 px-4 py-1.5 rounded-full text-xs font-semibold uppercase tracking-widest bg-primary/8 text-primary border border-primary/15">
@@ -139,7 +139,7 @@ const Pediatric = () => {
         </div>
       </section>
 
-      <SectionReveal className="section-surface-base py-16 sm:py-18 md:py-22 xl:py-24">
+      <SectionReveal className="flex min-h-[calc(100svh-var(--nav-h))] snap-start flex-col justify-center section-surface-base py-16 sm:py-18 md:py-22 xl:py-24">
         <div className={cnPageContainer()}>
           <SectionHeading
             badge="Core Services"
@@ -268,7 +268,7 @@ const Pediatric = () => {
         </div>
       </SectionReveal>
 
-      <SectionReveal className="section-surface-soft py-16 sm:py-18 md:py-22 xl:py-24">
+      <SectionReveal className="flex min-h-[calc(100svh-var(--nav-h))] snap-start flex-col justify-center section-surface-soft py-16 sm:py-18 md:py-22 xl:py-24">
         <div className={cnPageContainer()}>
           <SectionHeading badge="First Visit" title="Start early, stay ahead" subtitle="A first visit around age one helps assess risk, guide hygiene, and make future visits easier." />
           <div className="mx-auto grid max-w-6xl gap-6 xl:grid-cols-[1.08fr_0.92fr]">
@@ -304,7 +304,7 @@ const Pediatric = () => {
         </div>
       </SectionReveal>
 
-      <SectionReveal className="section-surface-base py-16 sm:py-18 md:py-22 xl:py-24">
+      <SectionReveal className="flex min-h-[calc(100svh-var(--nav-h))] snap-start flex-col justify-center section-surface-base py-16 sm:py-18 md:py-22 xl:py-24">
         <div className={cnPageContainer()}>
           <SectionHeading badge="Growth Timeline" title="Key milestones in oral development" subtitle="Knowing what is normal helps families spot concerns earlier." />
           <div className="mx-auto max-w-4xl">
@@ -331,7 +331,7 @@ const Pediatric = () => {
         </div>
       </SectionReveal>
 
-      <SectionReveal className="section-surface-soft py-16 sm:py-18 md:py-22 xl:py-24">
+      <SectionReveal className="flex min-h-[calc(100svh-var(--nav-h))] snap-start flex-col justify-center section-surface-soft py-16 sm:py-18 md:py-22 xl:py-24">
         <div className={cnPageContainer()}>
           <SectionHeading badge="Guidance" title="Helpful guidance for parents" subtitle="A few practical reminders between visits." />
           <div className="mx-auto max-w-4xl">

@@ -159,8 +159,8 @@ const Index = () => {
 
   return (
     <Layout>
-      <section className="relative hero-gradient flex items-center">
-        <div className={cnPageContainer("pt-0 pb-5 sm:pb-7 md:pt-1 md:pb-8 lg:pt-2 lg:pb-10 xl:pt-4 xl:pb-12 2xl:pt-6 2xl:pb-14")}>
+      <section className="relative hero-gradient flex min-h-[calc(100svh-var(--nav-h))] snap-start flex-col justify-start">
+        <div className={cnPageContainer("pt-1 pb-5 sm:pt-2 sm:pb-7 md:pb-8 lg:pt-3 lg:pb-10 xl:pb-12 2xl:pb-14")}>
           <div className="grid grid-cols-[minmax(0,1.02fr)_minmax(0,0.88fr)] items-center gap-3 sm:gap-5 md:gap-6 lg:gap-10 xl:grid-cols-[minmax(0,0.9fr)_minmax(0,1.1fr)] xl:gap-16 2xl:gap-20">
             <div className="min-w-0 max-w-2xl">
               <motion.h1
@@ -238,7 +238,7 @@ const Index = () => {
         </div>
       </section>
 
-      <SectionReveal className="section-surface-soft py-6 sm:py-8 md:py-10 xl:py-14">
+      <SectionReveal className="flex min-h-[calc(100svh-var(--nav-h))] snap-start flex-col justify-center section-surface-soft py-6 sm:py-8 md:py-10 xl:py-14">
         <div className={cnPageContainer()}>
           <div className="mb-4 text-center sm:mb-5">
             <span className="inline-block rounded-full border border-primary/15 bg-primary/8 px-4 py-1.5 text-[11px] font-semibold uppercase tracking-widest text-primary sm:text-xs">
@@ -282,7 +282,7 @@ const Index = () => {
         </div>
       </SectionReveal>
 
-      <SectionReveal className="section-surface-base py-14 sm:py-16 md:py-18 xl:py-20">
+      <SectionReveal className="flex min-h-[calc(100svh-var(--nav-h))] snap-start flex-col justify-center section-surface-base py-14 sm:py-16 md:py-18 xl:py-20">
         <div className={cnPageContainer()}>
           <SectionHeading
             badge="Departments & Specialists"
@@ -374,7 +374,7 @@ const Index = () => {
         </div>
       </SectionReveal>
 
-      <SectionReveal className="section-surface-soft py-16 sm:py-18 md:py-22 xl:py-24">
+      <SectionReveal className="flex min-h-[calc(100svh-var(--nav-h))] snap-start flex-col justify-center section-surface-soft py-16 sm:py-18 md:py-22 xl:py-24">
         <div className={cnPageContainer()}>
           <div className="mb-8 text-center md:mb-10">
             <span className="inline-block rounded-full border border-primary/15 bg-primary/8 px-4 py-1.5 text-[11px] font-semibold uppercase tracking-widest text-primary sm:text-xs">
@@ -503,7 +503,7 @@ const Index = () => {
         </div>
       </SectionReveal>
 
-      <SectionReveal className="section-surface-base py-16 sm:py-18 md:py-22 xl:py-24">
+      <SectionReveal className="flex min-h-[calc(100svh-var(--nav-h))] snap-start flex-col justify-center section-surface-base py-16 sm:py-18 md:py-22 xl:py-24">
         <div className={cnPageContainer()}>
           <SectionHeading
             badge="Visit Lumident"
@@ -602,7 +602,7 @@ const Index = () => {
         </div>
       </SectionReveal>
 
-      <SectionReveal className="section-surface-soft py-16 sm:py-18 md:py-22 xl:py-24">
+      <SectionReveal className="flex min-h-[calc(100svh-var(--nav-h))] snap-start flex-col justify-center section-surface-soft py-16 sm:py-18 md:py-22 xl:py-24">
         <div className={cnPageContainer()}>
           <AnimatedSection>
             <div className="mx-auto max-w-6xl">

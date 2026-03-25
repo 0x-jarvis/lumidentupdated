@@ -71,8 +71,8 @@ const options = [
 const Orthodontics = () => {
   return (
     <Layout>
-      <section className="relative hero-gradient flex items-center">
-        <div className={cnPageContainer("py-16 sm:py-18 md:py-20 xl:py-24")}>
+      <section className="relative hero-gradient flex min-h-[calc(100svh-var(--nav-h))] snap-start flex-col justify-start">
+        <div className={cnPageContainer("pt-3 pb-10 sm:pt-4 sm:pb-12 md:pt-5 md:pb-14 xl:pt-6 xl:pb-16")}>
           <div className="grid items-center gap-10 lg:grid-cols-[0.95fr_1.05fr] lg:gap-14 xl:gap-20">
             <div className="max-w-2xl">
               <motion.span initial={{ opacity: 0, y: 10 }} animate={{ opacity: 1, y: 0 }} className="inline-block mb-4 px-4 py-1.5 rounded-full text-xs font-semibold uppercase tracking-widest bg-primary/8 text-primary border border-primary/15">
@@ -121,14 +121,14 @@ const Orthodontics = () => {
         </div>
       </section>
 
-      <SectionReveal className="section-surface-base py-16 sm:py-18 md:py-22 xl:py-24">
+      <SectionReveal className="flex min-h-[calc(100svh-var(--nav-h))] snap-start flex-col justify-center section-surface-base py-16 sm:py-18 md:py-22 xl:py-24">
         <div className={cnPageContainer()}>
           <SectionHeading badge="Compare" title="Compare the treatment paths that fit your case" subtitle="A clearer way to compare the options most patients consider." />
           <TreatmentCompare />
         </div>
       </SectionReveal>
 
-      <SectionReveal className="section-surface-soft py-16 sm:py-18 md:py-22 xl:py-24">
+      <SectionReveal className="flex min-h-[calc(100svh-var(--nav-h))] snap-start flex-col justify-center section-surface-soft py-16 sm:py-18 md:py-22 xl:py-24">
         <div className={cnPageContainer()}>
           <SectionHeading badge="By Life Stage" title="Orthodontics changes with age and growth" subtitle="Timing matters because growth and eruption change the right option." />
           <div className="mx-auto grid max-w-7xl gap-6 md:grid-cols-2 xl:grid-cols-3 xl:gap-8">
@@ -156,7 +156,7 @@ const Orthodontics = () => {
         </div>
       </SectionReveal>
 
-      <SectionReveal className="section-surface-base py-16 sm:py-18 md:py-22 xl:py-24">
+      <SectionReveal className="flex min-h-[calc(100svh-var(--nav-h))] snap-start flex-col justify-center section-surface-base py-16 sm:py-18 md:py-22 xl:py-24">
         <div className={cnPageContainer()}>
           <SectionHeading badge="Treatment Journey" title="A clear path from consultation to retention" subtitle="A practical view of what happens during treatment." />
           <div className="mx-auto grid max-w-7xl gap-5 sm:grid-cols-2 xl:grid-cols-4 xl:gap-6">
@@ -174,7 +174,7 @@ const Orthodontics = () => {
         </div>
       </SectionReveal>
 
-      <SectionReveal className="section-surface-soft py-16 sm:py-18 md:py-22 xl:py-24">
+      <SectionReveal className="flex min-h-[calc(100svh-var(--nav-h))] snap-start flex-col justify-center section-surface-soft py-16 sm:py-18 md:py-22 xl:py-24">
         <div className={cnPageContainer()}>
           <SectionHeading badge="Treatment Options" title="Selected appliances and treatment choices" subtitle="Enough detail to help patients decide without overloading the page." />
           <div className="mx-auto grid max-w-6xl gap-5 md:grid-cols-2 xl:gap-6">
@@ -193,7 +193,7 @@ const Orthodontics = () => {
         </div>
       </SectionReveal>
 
-      <SectionReveal className="section-surface-base py-16 sm:py-18 md:py-22 xl:py-24">
+      <SectionReveal className="flex min-h-[calc(100svh-var(--nav-h))] snap-start flex-col justify-center section-surface-base py-16 sm:py-18 md:py-22 xl:py-24">
         <div className={cnPageContainer()}>
           <AnimatedSection>
             <div className="relative mx-auto max-w-6xl overflow-hidden rounded-3xl bg-gradient-to-r from-primary to-primary/80 p-8 text-center sm:p-10 md:p-14 xl:p-18">

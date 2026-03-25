@@ -46,6 +46,9 @@
 
     --radius: 0.75rem;
 
+    /* Fixed navbar row height (keep in sync with Navbar h-18 / theme spacing 18) */
+    --nav-h: 4.5rem;
+
     --glow-primary: 358 72% 46%;
     --surface-glass: 33 16% 88% / 0.84;
 
@@ -276,6 +279,7 @@
 
 html {
   scroll-behavior: smooth;
+  scroll-snap-type: y proximity;
 }
 
 /* Custom scrollbar */
